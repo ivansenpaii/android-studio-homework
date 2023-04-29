@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#681DE9B6"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="3dp"
+    tools:layout_editor_absoluteY="-2dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:shadowColor="#FFC107"
+        android:text="Сколько перевести?"
+        android:textColor="#2979FF"
+        android:textColorHighlight="#FA3030"
+        android:textColorLink="#2979FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_amount"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="187dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="112dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_from_currency"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="5dp"
+        android:shadowColor="#FFEB3B"
+        android:text="0.00"
+        android:textColor="#2979FF"
+        android:textColorLink="#2979FF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:shadowColor="#FFC107"
+        android:text="Из какой валюты?"
+        android:textColor="#2979FF"
+        android:textColorHighlight="#FA3030"
+        android:textColorLink="#2979FF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/sp_from_currency"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="52dp"
+        android:entries="@array/currency_array"
+        android:textColor="#2979FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/sp_to_currency"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="61dp"
+        android:entries="@array/currency_array"
+        android:textColor="#2979FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:shadowColor="#FFC107"
+        android:text="В какую валюту?"
+        android:textColor="#2979FF"
+        android:textColorHighlight="#FA3030"
+        android:textColorLink="#2979FF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="300dp"
+        android:shadowColor="#E6D8D8"
+        android:text="Конвертировать!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#E11616"
+        app:strokeColor="#FFEB3B" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
